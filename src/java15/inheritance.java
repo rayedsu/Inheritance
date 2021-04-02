@@ -7,5 +7,6 @@ public class inheritance {
 				"Fatmagül","Demirbaş",2000,
 				"male",67,147);
 		obje1.Calculate();
+		System.out.println("Zıbap zıbap değişiklik test");
 }
 }
