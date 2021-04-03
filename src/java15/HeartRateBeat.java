@@ -13,12 +13,20 @@ public class HeartRateBeat extends HeartRates {
 		this.weight=weight;
 	}
 
+	public double CalculateBMI() {
+		return weight / (this.height*this.height);
+	}
+
+
 	@Override
 	public void Calculate() {
 		super.Calculate();
 		System.out.println("Your Gender is: "+ gender);
 		System.out.println("Your Height is: "+ height);
 		System.out.println("Your Weight is: "+ weight);
+		System.out.println("Your BMI is: "+ CalculateBMI());
+		System.out.println("Your max heart rate is:" + calculateMaximumHeartRate());
+		System.out.println(calculateTargetHeartRate());
 	}
 
 	public String getGender() {

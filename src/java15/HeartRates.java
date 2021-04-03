@@ -2,71 +2,69 @@ package java15;
 
 
 public class HeartRates {
-private String firstname;
-private String lastname;
-private int birthyear;
+    private String firstname;
+    private String lastname;
+    private int birthyear;
 
 
-public HeartRates(String firstname, String lastname,int birthyear) {
-	this.firstname=firstname;
-	this.lastname=lastname;
-	this.birthyear=birthyear;
+    public HeartRates(String firstname, String lastname, int birthyear) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.birthyear = birthyear;
 
 
-}
-public void Calculate() {
-  
-	System.out.println("Your first name is:" +firstname);
-	System.out.println("Your last name is:" +lastname);
-	System.out.println("Your age is:" +(2020- birthyear));
-}
-/**
- * @return the firstname
- */
-public String getFirstname() {
-	return firstname;
-}
-/**
- * @param firstname the firstname to set
- */
-public void setFirstname(String firstname) {
-	this.firstname = firstname;
-}
-/**
- * @return the lastname
- */
-public String getLastname() {
-	return lastname;
-}
-/**
- * @param lastname the lastname to set
- */
-public void setLastname(String lastname) {
-	this.lastname = lastname;
-}
-/**
- * @return the birthyear
- */
-public double getBirthyear() {
-	return birthyear;
-}
-/**
- * @param birthyear the birthyear to set
- */
-public void setBirthyear(int birthyear) {
-	this.birthyear = birthyear;
-}
-/**
- * @return the age
- */
+    }
 
-@Override
-public String toString() {
-	// TODO Auto-generated method stub
-	return super.toString();
-}
+    public Integer calculateAge() {
+        return 2021 - birthyear;
+    }
 
+    public Integer calculateMaximumHeartRate(){
+        return 220-calculateAge();
+    }
 
+    public String calculateTargetHeartRate(){
+        Integer max = calculateMaximumHeartRate();
+        return "Your Target Heart Rate is between " + max*50/100 + " and " + max*85/100;
+    }
+
+    public void Calculate() {
+
+        System.out.println("Your first name is:" + firstname);
+        System.out.println("Your last name is:" + lastname);
+        System.out.println("Your age is:" + calculateAge());
+
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public double getBirthyear() {
+        return birthyear;
+    }
+
+    public void setBirthyear(int birthyear) {
+        this.birthyear = birthyear;
+    }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return super.toString();
+    }
 }
 
 
